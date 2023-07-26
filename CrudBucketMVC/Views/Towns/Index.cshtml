@@ -1,0 +1,12 @@
+﻿@model IEnumerable<CrudBucketMVC.Models.Town>
+
+<h1>Towns</h1>
+
+<a href="/towns/new">Add a Town</a>
+
+@foreach (var town in Model)
+{
+    <div class="town-info">
+        <p><a href="/towns/@town.Id">@town.Name</a>, Miles from Denver: @town.DistanceRT, Time from Denver (minutes): @town.TimeAway</p>
+    </div>
+}
